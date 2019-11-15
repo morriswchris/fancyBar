@@ -4,7 +4,9 @@ chunkc=/usr/local/bin/chunkc
 
 active=$($chunkc tiling::query -d id)
 total=$($chunkc tiling::query -D 1 | tail -c 1)
+application=$($chunkc tiling::query --window owner)
 current=$($chunkc tiling::query --window name)
+#current=$($chunkc tiling::query --window owner)
 mode=$($chunkc tiling::query -d mode)
 
-echo "$mode@$total@$active@$current"
+echo "$mode@$total@$active@$application | $current"

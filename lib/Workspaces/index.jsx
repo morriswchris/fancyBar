@@ -12,6 +12,7 @@ const defaultIcon = ''
 const iconsList = ['', '', '', '']
 
 const getWorkspaces = (workspaceAmount, active) => {
+  debugger;
   return [...Array(workspaceAmount)].map((item, index) => {
     const currentIcon = iconsList[index] ? iconsList[index] : defaultIcon
     const realIdx = index + 1
